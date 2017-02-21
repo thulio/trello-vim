@@ -43,8 +43,7 @@ SHOW_DONE_CARDS = configs['done_cards']
 
 KEY_TOKEN = {'key': configs['key'], 'token': configs['token']}
 BOARDS_URL = 'https://trello.com/1/members/me/boards?key={key}&token={token}'.format(**KEY_TOKEN)
-LISTS_URL = 'https://api.trello.com/1/boards/{id}/lists?key={key}&token={token}&cards=all'
-CARDS_URL = 'https://trello.com/1/members/my/cards?key={key}&token={token}'.format(**KEY_TOKEN)
+LISTS_URL = 'https://api.trello.com/1/boards/{id}/lists?key={key}&token={token}&cards=open'
 
 try:
     boards_request = json.loads(urllib2.urlopen(BOARDS_URL).read())
